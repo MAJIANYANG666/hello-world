@@ -1,12 +1,6 @@
-## 简单模拟腾讯LOL官网首页
-
-### 预览链接:
-
-https://greygao.github.io/hello-world/Prc30-1_LOL_Index/Prc30-1.html
-  
-&nbsp; 
-
-### 主要构成
+# 简单模拟腾讯LOL官网首页
+## 预览链接
+## 主要构成
 1. topbar 顶栏
 2. banner 广告栏
 3. menu 主页面目录
