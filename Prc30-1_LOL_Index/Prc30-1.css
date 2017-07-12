@@ -1,4 +1,4 @@
-/*css reset*/
+/*-----------------------------------------------css reset---------------------------------------------------*/
 * { margin: 0; padding: 0; box-sizing: border-box; }
 *::before { box-sizing: border-box; }
 *::after { box-sizing: border-box; }
@@ -7,27 +7,9 @@ a, a:visited { text-decoration: none; }
 body { font-size: 12px; color: white; font-family: Microsoft YaHei, Tahoma, simsun; }
 i { display: inline-block; }
 .clearfix::after { content: ''; display: block; clear: both; }
-/*  思路
-    1.topbar部分
-        topbar-wrapper:顶栏占满页面，黑色背景；相对定位；
-        topbar：显示主要内容；
-        navigation：让出logo位置，放入mainNavigation和subNavigation；
-        mainNavigation：左浮动；
-        subNavigation：绝对定位；背景半透明；
-        icons：左浮动；
-        userInformation：右浮动；
-
-    2.banner部分
-        banner-wrapper:下边框结束header部分，背景白色；
-        banner：背景用图；
-        logo：向上偏移进topbar的预留logo位置；
-
-*/
 
 
-
-
-/*-------------------------------------------header----------------------------------------------*/
+/*-------------------------------------------------header-----------------------------------------------------*/
 .header { background: url(http://ossweb-img.qq.com/images/lol/v2/banner/pic-back-v7.jpg) no-repeat center 90px;
     overflow: hidden; }
 
@@ -41,7 +23,8 @@ i { display: inline-block; }
 #navigation .mainNavigation > ul > li { float: left; padding: 28px 0; width: 120px; text-align: center;
     line-height: 1; }
 #navigation .mainNavigation > ul > li > a { font-size: 18px; color: #fafafa; }
-#navigation .mainNavigation > ul > li > a > span { padding-top: 4px; font-size: 10px; display: block; color: #838383; }
+#navigation .mainNavigation > ul > li > a > span { padding-top: 4px; font-size: 10px; display: block;
+    color: #838383; font-family: 'Tahoma'; text-transform: uppercase; }
 
 /*header topbar 副导航*/
 #navigation .subNavigation { position: absolute; top: 88px; left: 0; padding: 20px 0; width: 100%;
@@ -71,14 +54,14 @@ i { display: inline-block; }
 #userInformation .loginInfo > .unloginInfo { font-size: 16px; padding: 5px 0; }
 #userInformation .loginInfo > .unloginInfo > a { color: #dfb257; text-decoration: underline; margin: 0 3px; }
 #userInformation .loginInfo > .unloginTips { color: #999; font-size: 12px; padding-right: 24px; }
-#userInformation .loginInfo > .user-popover { display: none; position: absolute; top: 100%; left: 0; z-index: 1;
+#userInformation .loginInfo > .user-popover { display: none; position: absolute; top: 100%; left: 0; z-index: 2;
     background: rgba(27, 27, 27, 0.9); width: 100%; padding-top: 20px; }
 #userInformation .loginInfo > .user-popover > .popover-drop { padding: 10px 30px 30px; text-align: left; color: #868686;
     font-size: 14px; }
 #userInformation .loginInfo > .user-popover > .userInfoLink { background: #161413; clear: both; display: block;
     height: 36px; line-height: 36px; color: #e0e0e0; font-size: 12px; text-align: center; }
 #userInformation:hover { background: rgba(27, 27, 27, 0.9); }
-#userInformation:hover > .loginInfo > .user-popover { display: block; }
+#userInformation .loginInfo > .on {display:block;}
 
 /*header banner*/
 .banner-wrapper { position: relative; }
@@ -120,7 +103,8 @@ i { display: inline-block; }
     border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%); border-image-slice: 1; }
 #nowVersion > .top-version-link:hover{ background: rgba(0,0,0,0.9);}
 
-/*-------------------------------------menuMain----------------------------------------*/
+/*----------------------------------------------menu-----------------------------------------------------*/
+
 .menuMain { position: relative; border-top: 2px solid #8c6c2d; height: 82px;
     background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) repeat-x 0 -257px; }
 .menuMain > .menu-inner { width: 1240px; margin: 0 auto; }
@@ -135,13 +119,13 @@ i { display: inline-block; }
     border-bottom: 2px solid #d1ab57; }
 
 
-/*-------------------------------------content------------------------------------------*/
+/*-----------------------------------------------content---------------------------------------------------*/
 .content { padding-top: 40px; margin-top: -20px;
     background: #f7f7f7 url(http://ossweb-img.qq.com/images/lol/v2/bg-content-top.jpg) no-repeat center top; }
 .content > .content-wrapper {
     background: url(http://ossweb-img.qq.com/images/lol/v2/bg-content-bottom.jpg) no-repeat center bottom; }
 .content > .content-wrapper > .content-inner { overflow: hidden; }
-#homeSlide { position: relative; width: 1240px; margin: 0 auto; }
+#homeSlide { position: relative; width: 1240px; margin: 0 auto;padding-bottom: 20px; }
 
 
 /*promo 轮播组件*/
@@ -169,36 +153,143 @@ i { display: inline-block; }
 
 
 /*news 新闻公告*/
-.news { float: left; background: red; opacity: 0.5;
-    width: 820px; height: 715px;
-    margin-right: 20px;
-    margin-bottom: 60px; }
-.news .tab{position: relative; height: 50px; border-bottom: 3px solid #ededee;}
-.news .tab>.tab-title{    float: left;
-    font-size: 26px;
-    line-height: 50px;
-    color: #404040;
-    margin-right: 40px;
-    font-weight: normal;}
-.news .tab>.tab-nav{    float: left;
-    margin-top: 14px;
-    position: relative;
-    height: 36px;}
+.news { float: left; width: 820px; margin-right: 20px; margin-bottom: 60px; }
+.news .tab { position: relative; height: 53px; border-bottom: 3px solid #ededee; border-bottom: 3px solid #ededee; }
+.news .tab > .tab-title { float: left; font-size: 26px; line-height: 50px; color: #404040;
+    margin-right: 40px; font-weight: normal; }
+.news .tab > .tab-nav { float: left; margin-top: 14px; position: relative; }
+.news .tab > .tab-nav > li { float: left; width: 168px; font-size: 18px; height: 39px; line-height: 39px;
+    overflow: hidden; cursor: pointer; color: #666666; text-align: center; }
+.news .tab > .tab-nav > .current { color: #d1ab57; font-weight: bold; border-bottom: 3px solid #d1ab57; }
+.news .news-list { padding: 24px 0 0; }
+.news-list> .news-content{display:none;}
+.news-list> .current{display:block;}
+.news-content > .txtlist > .first { height: 124px; margin-bottom: 24px; overflow: hidden; }
+.news-content > .txtlist > .first > a > img { float: left; margin-right: 20px; }
+.news-content > .txtlist > .first > a > .news-first-title { display: block; font-size: 36px; font-weight: bold;
+    color: #3e3e3e; line-height: 50px; height: 50px; overflow: hidden; }
+.news-content > .txtlist > .first > a > .news-first-desc { display: block; height: 60px; overflow: hidden;
+    font-size: 14px; color: #898989; line-height: 1.5; }
+.news-content > .txtlist > .news-item { height: 43px; line-height: 43px; padding: 4px 0; }
+.news-content > .txtlist > .news-item > a { display: block; position: relative; height: 35px; line-height: 35px;
+    padding: 0 55px 0 90px; overflow: hidden; font-size: 16px; color: #555555; }
+.news-content > .txtlist > .news-item > a:hover { color: #d1ab57; }
+.news-content > .txtlist > .news-item > a:hover > .new-type { background: #d1ab57; color: #fff; }
+.news-content > .txtlist > .news-item > a > .new-type { position: absolute; left: 0; top: 0; width: 68px;
+    height: 35px; line-height: 35px; background: #ebebeb; text-align: center; color: #7a7a7a; }
+.news-content > .txtlist > .news-item > a > .date { position: absolute; right: 0; top: 0; width: 50px;
+    height: 35px; line-height: 35px; text-align: right; color: #bababa; }
 
+.news .news-more { display: block; width: 100%; height: 45px; margin-top: 15px; line-height: 45px;
+    background: #f0f0f0; color: #515151; font-size: 16px; text-align: center; }
+.news .news-more em { color: #d1ab57; font-style: normal; }
+.news .news-more:hover { color: #555555; background: #dad8d8; }
 
-
-.news .news-more em { color: #d1ab57; }
 
 /*hero 英雄皮肤*/
-#homeSlide > .home-slide-item > .hero { float: left; margin-bottom: 50px; background: deeppink; opacity: 0.1;
-    width: 400px; height: 720px; }
+#homeSlide > .home-slide-item > .hero { float: left; margin-bottom: 50px; width: 400px; }
+.hero-nav { margin-bottom: 15px; float: left; margin-top: 14px; position: relative;
+    height: 39px; border-bottom: 3px solid #ededee; }
+.hero-nav > .hero-type { float: left; width: 133px; height: 39px; line-height: 39px;
+    overflow: hidden; cursor: pointer; color: #666666; font-size: 16px; text-align: center; }
+.hero-nav > .current { color: #d1ab57; font-weight: bold; border-bottom: 3px solid #d1ab57; }
+.hero > .bd{height:420px;}
+.hero > .bd > .hero-content { display: none; }
+.hero > .bd > .current { display: block; }
+.hero-content { margin-bottom: 20px; }
+.free-list, .hero-new-list { position: relative; margin-right: -10px; }
+.free-list a, .hero-new-list a { float: left; position: relative; width: 195px; height: 70px;
+    overflow: hidden; margin-right: 10px; margin-bottom: 10px; }
+.free-time { text-align: right; color: #9F9F9F; margin-bottom: 22px;padding-bottom: 4px; }
+.sbg { display: none; }
+.hero-new-list >.skin-first { width: 400px; height: 145px; }
+.free-list > a:hover > .sbg { display: block; position: absolute;
+    width: 195px; height: 70px; top: 0; left: 0;
+    background: #000; background: rgba(0, 0, 0, 0.78);
+    cursor: pointer; overflow: hidden; z-index: 1; }
+.hero-new-list a:hover > .sbg { display: block; position: absolute;
+    width: 195px; height: 70px; top: 0; left: 0;
+    background: #000; background: rgba(0, 0, 0, 0.78);
+    cursor: pointer; overflow: hidden; z-index: 1; }
+.sbg .first-name { font-size: 14px; color: #c9aa71; position: absolute;
+    width: 100%; text-align: center; top: 30px; left: 50%;
+    margin-left: -97px; padding-top: 0; line-height: 14px; }
+
+.hero > .qt-go { display: block; margin-top: 44px; margin-bottom: 20px; }
+.hero > .side-tips-18 { font-size: 12px; color: #878787; position: relative;
+    height: 75px; padding-top: 5px; padding-left: 80px;}
+.side-tips-18>.icon-18 { position: absolute; left: 0; top: 0; width: 70px; height: 70px;
+    background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -330px -89px;}
+.side-tips-18 h5 { color: #404040; font-size: 14px; font-weight: normal; }
+
+
 /*recommend 最新推荐*/
 #homeSlide > .home-slide-item > .recommend { clear: both; margin-bottom: 50px;
-    background: purple; opacity: 0.1; height: 323px; }
+   }
+.recommend .recommend-top { margin-bottom: 20px; position: relative; height: 53px; border-bottom: 3px solid #ededee; }
+.recommend-top .tab-title { float: left; font-size: 26px; line-height: 50px; color: #404040;
+    margin-right: 40px; font-weight: normal; }
+.recommend-top .recommend-nav { float: left; margin-top: 14px; position: relative; height: 39px; }
+.recommend-nav > .recommend-type { width: 150px; float: left; height: 39px; line-height: 39px; overflow: hidden;
+    cursor: pointer; color: #666666; font-size: 16px; text-align: center; }
+.recommend-nav > .current { color: #d1ab57; font-weight: bold; border-bottom: 3px solid #d1ab57; }
+.recommend-list>.recommend-content {display:none;padding-bottom: 0;}
+.recommend-list>.current{display: block;}
+
+.recommend-video { height: 190px; width: 1260px; position: relative; }
+.recommend-video > li { width: 190px; height: 155px; margin: 0 20px 0 0; position: relative; float: left; }
+.recommend-video > li > .pv-lnk { width: 100%; height: 100%; display: block; color: #555; position: relative; }
+.pv-list li .pv-lnk img { width: 190px; height: 110px; display: block; margin-bottom: 5px; }
+.pv-list li .pv-cover-1 { width: 100%; height: 110px; top: 0; left: 0; display: none; background: rgba(0, 0, 0, 0.3); }
+.pv-list li .pv-lnk .pv-cover-ico { width: 65px; height: 65px; left: 60px; top: 20px; display: none;
+    background: url(http://ossweb-img.qq.com/images/lol/web201310/video/bg-icon-v.png) no-repeat 0 0; }
+.shadow1 { bottom: 45px; text-align: right; line-height: 30px; position: absolute;
+    left: 0; display: block; width: 100%; height: 20%; background: rgba(0, 0, 0, 0.5); }
+.pv-list .shadow1 i { padding-right: 5px; font-style: normal; color: #ddd; }
+.pv-list li .pv-lnk h5 { font-weight: normal; line-height: 20px; height: 40px; overflow: hidden; font-size: 14px; }
+.pv-list li:hover { background: #eee; }
+.pv-list li:hover a { color: #c49f58; }
+.pv-list li:hover .pv-cover-1 { display: block; }
+.pv-list li:hover .pv-cover-ico { display: block; }
+.pv-list .pa { position: absolute; }
 
 
+.recommend-act { margin-right: -13.3333px; position: relative; }
+.recommend-act > li { float: left; box-shadow: 0 3px 6px rgba(0, 0, 0, .15); width: 300px;
+    height: 240px; margin: 0 13px 0 0; }
+.recommend-act .act-img { width: 100%; height: 130px; display: block; position: relative; overflow: hidden; }
+.recommend-act .act-img img { width: 300px; display: block; transition: ease all .8s; height: 130px; }
+.act-list .act-img .act-num { background: url(http://ossweb-img.qq.com/images/lol/v2/op60.png) repeat;
+    width: 100%; height: 26px; line-height: 26px; color: #f8f8f8; font-size: 12px; position: absolute;
+    left: 0; bottom: 0; text-align: center; }
+.act-list .act-img .act-num-f { color: #f3ca6f; margin: 0 4px; font-weight: normal; }
+.act-over { background: #c8c8c8; position: absolute; height: 22px; line-height: 22px; padding: 0 8px;
+    border-radius: 11px; font-size: 12px; z-index: 2; color: #fff; top: 5px; right: 5px; }
 
-/*-------------------------------------------global----------------------------------------------*/
+.act-list .act-innr { padding: 11px 15px 0; position: relative; }
+.act-list .act-innr .act-tit { color: #404040; font-size: 24px; line-height: 30px; }
+.act-list .act-innr .act-date { font-size: 12px; line-height: 16px; color: #d1ab57; margin: 6px 0 10px; }
+.act-list .act-innr h4{color: #666;}
+.act-list .act-innr .act-date span { color: #9f9f9f; }
+.act-list .act-innr .act-intro { color: #888; font-size: 12px; line-height: 16px; }
+
+.recommend-content> .recommend-more { display: block; width: 100%; height: 45px; margin-top: 15px; line-height: 45px;
+    background: #f0f0f0; color: #515151; font-size: 16px; text-align: center; }
+.recommend-content> .recommend-more em { color: #d1ab57;font-style: normal; }
+.recommend-content> .recommend-more:hover { color: #555555; background: #dad8d8; }
+
+/*-------------------------------------------------footer-----------------------------------------------------*/
+
+.footer { padding: 30px 0; zoom: 1;
+    background: url(http://ossweb-img.qq.com/images/lol/v2/bg-footer.jpg) no-repeat center top; }
+.footer-inner { padding-left: 380px; margin:0 auto; width: 1240px; zoom: 1; color: #A5A5A5; }
+.footer-flst { float: right; }
+.footer .c4F6 { color: #568193; }
+.footer .f9 { font-size: 11px; color: #568193; }
+.footer li{padding-bottom: 3px;}
+.footer li.f9 { color: #415967; }
+
+/*-------------------------------------------------global-----------------------------------------------------*/
 
 /*icons 图标*/
 .icon-hot, .icon-new { display: inline-block; vertical-align: middle; width: 14px; height: 14px; margin-right: 2px;
