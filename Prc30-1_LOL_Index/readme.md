@@ -1,4 +1,4 @@
-# 简单模拟腾讯LOL官网首页
+# 简单模拟腾讯LOL官网首页 v1.1
 ## 预览链接
 https://greygao.github.io/hello-world/Prc30-1_LOL_Index/Prc30-1.html
 ## 主要构成
@@ -11,3 +11,7 @@ https://greygao.github.io/hello-world/Prc30-1_LOL_Index/Prc30-1.html
 7. hero-nav 英雄等信息介绍导航
 8. recommend 推荐信息导航
 9. footbar 尾栏
+
+## v1.1
+1. 修复了顶栏副导航icon的问题
+2. 修复了主页面宽度不对，不适应的问题
