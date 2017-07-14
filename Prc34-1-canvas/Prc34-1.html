@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>画图小工具</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        /*css reset*/
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ul, ol{ list-style: none; }
+        .clearfix::after { content: ''; display: block; clear: both; }
+
+        /*footbar*/
+        body { background: #eee; margin: 0 auto; height: 100vh; width: 100vw; position: relative;
+            border: 3px solid rgba(13, 13, 13, 0.49); box-shadow: inset 0 0 5px #eee;
+            border-radius: 4px; overflow: hidden }
+        .bottom-layout { background: rgba(161, 167, 168, 0.18); position: fixed; bottom: 0; width: 100% }
+        .footbar { float: left; left: 50%; position: relative; }
+        .footbar .footbar-wrapper { float: left; left: -50%; position: relative; }
+        .footbar .foot-tool { float: left; padding: 3px 24px; margin-top: 6px; }
+        .icon { width: 30px; height: 30px; }
+        .foot-tool > span { display: block; padding-bottom: 3px; color: #999999; font-size: 10px; text-align: center; }
+        .footbar-wrapper > .current { transition: 0.3s; opacity: 0.5; }
+        .reset:hover { animation: shine 2s; }
+        .save:hover { animation: shine 2s; }
+
+        @keyframes shine {
+            0%{opacity: 1;}
+            50%{opacity: 0.5;}
+            100%{opacity: 1;}
+            }
+
+        /*drawInput*/
+        .drawInput{position: relative;overflow: hidden;}
+    </style>
+</head>
+<body>
+
+
+<div class="main-layout">
+    <canvas id="app" class="drawInput"></canvas>
+</div>
+<div class="bottom-layout clearfix">
+    <div class="footbar clearfix">
+        <ul class="footbar-wrapper clearfix">
+            <li class="pen-tool foot-tool pen current">
+                <img src="https://ooo.0o0.ooo/2017/07/14/5968a91f59c4a.png" alt="画笔" class="icon pen">
+                <span>draw</span>
+            </li>
+            <li class="pen-tool foot-tool eraser">
+                <img src="https://ooo.0o0.ooo/2017/07/14/5968b0b5020e2.png" alt="橡皮" class="icon eraser">
+                <span>erase</span>
+            </li>
+            <li class="foot-tool save">
+                <img src="https://i.loli.net/2017/07/14/5968a91f57fa3.png" alt="保存" class="icon save">
+                <span>save</span>
+            </li>
+            <li class="foot-tool reset">
+                <img src="https://i.loli.net/2017/07/14/5968a91f2ac1b.png" alt="重置" class="icon rest">
+                <span>reset</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="./jquery-3.2.1.min.js"></script>
+<script src="./Prc34-1.js" ></script>
+</html>
