@@ -29,6 +29,7 @@ let prePoint;
 
 // 创建画笔触控监听
 canvas.addEventListener('touchmove', function (e) {
+    e.preventDefault();
     // 获取触控坐标
     let clientX = e.touches[0].clientX;
     let clientY = e.touches[0].clientY;
