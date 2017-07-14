@@ -9,11 +9,9 @@
  * 7.设置重置功能
  */
 
-console.log('JS加载了1');
 
 // 激活按钮
 $('.pen-tool').on('click',function (e) {
-    console.log('选择该按钮');
     let $li = $(e.currentTarget);
     $li.addClass('current').siblings().removeClass('current');
 });
@@ -36,7 +34,6 @@ canvas.addEventListener('touchmove', function (e) {
 
     //查看类型
     let $index = $('.pen-tool').filter('.current').index();
-    console.log($index);
 
     // 创建画笔
     if ($index === 0) {                              //画笔
@@ -59,7 +56,6 @@ canvas.addEventListener('touchmove', function (e) {
         let ctx = canvas.getContext('2d');
         ctx.clearRect(clientX - 10, clientY - 10, 20, 20)
     }
-
 });
 
 canvas.addEventListener('touchend',function (e){
