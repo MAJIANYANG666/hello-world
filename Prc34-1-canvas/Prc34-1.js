@@ -65,7 +65,20 @@ canvas.addEventListener('touchend',function (e){
 
 // 保存canvas图片
 $('.save').on('click',function () {
-    let canvas = document.getElementById("app");
+    let ctx = canvas.getContext('2d');
+    // 将canvas的透明背景设置成白色
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for(let i = 0; i < imageData.data.length; i += 4) {
+    // 当该像素是透明的，则设置成白色
+        if(imageData.data[i + 3] == 0) {
+            imageData.data[i] = 255;
+            imageData.data[i + 1] = 255;
+            imageData.data[i + 2] = 255;
+            imageData.data[i + 3] = 255;
+        }
+    }
+    ctx.putImageData(imageData, 0, 0);
+
     window.open(canvas.toDataURL('image/png'));
 });
 
@@ -74,6 +87,5 @@ $('.save').on('click',function () {
 $('.reset').on('click',function () {
     let ctx = canvas.getContext('2d');
     ctx.clearRect(0,0,canvas.width,canvas.height);
-
 });
 
