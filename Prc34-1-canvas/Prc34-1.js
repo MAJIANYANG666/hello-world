@@ -44,7 +44,7 @@ canvas.addEventListener('touchmove', function (e) {
             let ctx = canvas.getContext('2d');
             ctx.fillStyle = 'green';
             ctx.lineWidth = 3;
-            ctx.strokeStyle = 'red';
+            ctx.strokeStyle = '#14E8BB';
             // 绘制路径
             ctx.beginPath();
             ctx.moveTo(prePoint.x, prePoint.y);      //移动到上一个点
