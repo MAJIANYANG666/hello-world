@@ -4,7 +4,8 @@
 *::after { box-sizing: border-box; }
 ul, ol ,li{ list-style: none; }
 a, a:visited { text-decoration: none; }
-body { font-size: 12px; color: white; font-family: Microsoft YaHei, Tahoma, simsun; }
+body { font-size: 12px; color: white; font-family: Microsoft YaHei, Tahoma, simsun; zoom:1;
+    min-width:1240px; margin:0 auto;}
 i { display: inline-block; }
 .clearfix::after { content: ''; display: block; clear: both; }
 
@@ -149,8 +150,8 @@ i { display: inline-block; }
 .side-nav .side-menu > li>a:hover{ background: #f0f0f0;}
 .side-nav .side-menu > li > a { display: block; width: 130px; height: 55px; line-height: 55px;
     background: #fff; text-align: center; font-size: 14px; color: #555555; }
-.side-nav .side-menu > li > a>.icon-hot,.icon-new{ position: absolute; margin-top: 3px; }
-
+.side-nav .side-menu > li > a>.icon-hot{ position: absolute; margin-top: 3px; }
+.side-nav .side-menu > li > a>.icon-new{ position: absolute; margin-top: 3px; }
 
 /*news 新闻公告*/
 .news { float: left; width: 820px; margin-right: 20px; margin-bottom: 60px; }
@@ -293,7 +294,7 @@ i { display: inline-block; }
 
 /*icons 图标*/
 .icon-hot, .icon-new { display: inline-block; vertical-align: middle; width: 14px; height: 14px; margin-right: 2px;
-    background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) }
+    background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat;;}
 .icon-hot { background-position: -107px 0; }
 .icon-new { background-position: -129px 0; }
 .icon-guide, .icon-yz, .icon-mall, .icon-icon, .icon-prestige, .icon-cdk, .icon-rgm, .icon-info,
@@ -312,4 +313,5 @@ i { display: inline-block; }
 .icon-weibo { background-position: -500px 0; }
 .icon-bbs { background-position: -410px 0; }
 .icon-kefu { background-position: -440px 0; }
+
 
